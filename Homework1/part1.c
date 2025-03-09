@@ -178,12 +178,6 @@ float main()
   printf("Error Percentage: %.2f%%\n",errorRate);
   printf("Average Error Value: %.2f%%\n",sumOfErrorRate/4);
 
-
-
-
-
-
-
   return 0;
 }
 
