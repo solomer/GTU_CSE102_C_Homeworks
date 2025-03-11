@@ -1,10 +1,9 @@
 #include <stdio.h>
 float trueOp(float num1,float num2, char operation);
 float falseOp(float num1,float num2, char operation);
-float main()
+int main()
 {
   float num1, num2,error,result,falseResult,errorRate;
-  /*float yapıllıcak*/
   float sumOfErrorRate=0;
   char operation;
   /*1*/
