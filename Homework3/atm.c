@@ -11,7 +11,7 @@ int main()
 {
   printf("----- Virtual ATM -----\n");
   double initialBalance = 100.00;
-  accounts = fopen("/home/omer/linuxcode/gtu cse homeworks/Homework3/account.txt", "r");
+  accounts = fopen("account.txt", "r");
   if (accounts == NULL || fgetc(accounts) == EOF)
   {
     printf("Generating a new account with a balance of 100$\n");
@@ -38,7 +38,7 @@ void check_balance()
   fscanf(accounts, "%lf", &balance);
   fclose(accounts);
   printf("Current balance: $%.2f\n", balance);
-  menu();
+  //menu();
 }
 void deposit_money()
 {
@@ -61,9 +61,9 @@ void deposit_money()
     fscanf(accounts, "%lf", &balance);
     fclose(accounts);
     update_balance(amount + balance);
-    printf("Deposit successful! New balance: $%.2f (Saved account.txt)", amount + balance);
+    printf("Deposit successful! New balance: $%.2f (Saved account.txt)\n", amount + balance);
   }
-  menu();
+  //menu();
 }
 void withdraw_money()
 {
@@ -95,7 +95,7 @@ void withdraw_money()
       printf("Withdraw succwssful! New balance: $%.2f\n", balance - amount);
     }
   }
-  menu();
+  //menu();
 }
 
 void menu()
